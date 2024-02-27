@@ -1,20 +1,15 @@
 # ByteConverter :floppy_disk: :sparkles:
 
-## Overview :mag:
+## Intro :mag:
 ByteConverter is a powerful yet simple tool designed to convert binary files (like images) into C++ header arrays. This is particularly useful for embedding resources directly into your code. :computer:
-
-## Features :star2:
-- **Simple and Intuitive**: Easy to use with a straightforward interface.
-- **Efficient**: Optimized for minimal memory usage and fast processing.
-- **Logging**: Detailed logging to keep track of the conversion process.
 
 ## Getting Started :rocket:
 ### Prerequisites
 - Python 3.x
 
 ### Installation
-1. Clone the repository
-2. Navigate to the project directory
+1. Clone the repository.
+2. Navigate to the project directory.
 
 ### Usage
 Run the script and follow the on-screen prompts:
