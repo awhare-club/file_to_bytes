@@ -9,7 +9,7 @@ class ByteConverter:
     def _get_input(self, prompt: str) -> str:
         return input(prompt).strip()
 
-    def get_data(self):
+    def get_data(self) -> None:
         if self._input_filename is None:
             self._input_filename = self._get_input("Enter input filename: ")
         if self._output_filename is None:
@@ -17,7 +17,7 @@ class ByteConverter:
         if self._array_name is None:
             self._array_name = self._get_input("Enter array name: ")
 
-    def file_to_header(self):
+    def file_to_header(self) -> None:
         self.get_data()
         start_time = time.time()
         print(f"Converting {self._input_filename} to {self._output_filename} with array name {self._array_name}")
