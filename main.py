@@ -1,9 +1,7 @@
-import os, time
-from loguru import logger
+import time
 
 class ByteConverter:
     def __init__(self) -> None:
-        logger.add("byte_converter.log", mode="+w")
         self._input_filename = None
         self._output_filename = None
         self._array_name = None
@@ -22,7 +20,7 @@ class ByteConverter:
     def file_to_header(self):
         self.get_data()
         start_time = time.time()
-        logger.info(f"Converting {self._input_filename} to {self._output_filename} with array name {self._array_name}")
+        print(f"Converting {self._input_filename} to {self._output_filename} with array name {self._array_name}")
 
         try:
             with open(self._input_filename, "rb") as image_file:
@@ -37,10 +35,10 @@ class ByteConverter:
                 header_file.write(''.join(header_content))
 
             end_time = time.time()
-            logger.success(f"Converted {self._input_filename} to {self._output_filename} in {end_time - start_time:.2f} seconds")
+            print(f"Converted {self._input_filename} to {self._output_filename} in {end_time - start_time:.2f} seconds")
 
         except IOError as e:
-            logger.error(f"File operation failed: {e}")
+            print(f"File operation failed: {e}")
 
 if __name__ == "__main__":
     tool = ByteConverter()
