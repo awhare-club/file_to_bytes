@@ -4,7 +4,7 @@ on: [push]
 
 jobs:
   build:
-    runs-on: ubuntu-latest
+    runs-on: windows-latest
     steps:
     - name: Check out the repo
       uses: actions/checkout@v2
@@ -21,7 +21,7 @@ jobs:
       run: pyinstaller --onefile converter.py
 
     - name: Zip the executable
-      run: zip release.zip dist/converter.exe
+      run: Compress-Archive -Path dist/converter.exe -DestinationPath release.zip
 
     - name: Create Release
       id: create_release
